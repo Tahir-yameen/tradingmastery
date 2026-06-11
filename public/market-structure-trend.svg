@@ -1,0 +1,18 @@
+<svg width="800" height="420" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" rx="24" fill="#04111E"/>
+  <rect x="20" y="20" width="760" height="380" rx="20" fill="url(#bg)" stroke="#1F2937"/>
+  <path d="M120 310L240 210L340 240L430 120L540 165L650 90" stroke="#38BDF8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="240" cy="210" r="8" fill="#F8FAFC"/>
+  <circle cx="430" cy="120" r="8" fill="#F8FAFC"/>
+  <circle cx="650" cy="90" r="8" fill="#F8FAFC"/>
+  <path d="M140 290H660" stroke="#334155" stroke-width="2" stroke-dasharray="8 8"/>
+  <rect x="110" y="60" width="260" height="72" rx="18" fill="#0F172A" stroke="#1E293B"/>
+  <text x="135" y="90" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Trend Direction</text>
+  <text x="135" y="114" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="13">Follow structure, not noise</text>
+  <defs>
+    <linearGradient id="bg" x1="20" y1="20" x2="780" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+</svg>

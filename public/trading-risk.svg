@@ -1,0 +1,17 @@
+<svg width="800" height="420" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" rx="24" fill="#07111F"/>
+  <rect x="24" y="24" width="752" height="372" rx="18" fill="url(#bg)" stroke="#243447"/>
+  <path d="M120 300L280 180L390 220L520 120L680 170" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M120 320H680" stroke="#334155" stroke-width="2" stroke-dasharray="8 8"/>
+  <rect x="120" y="80" width="220" height="72" rx="18" fill="#0F172A" stroke="#22344B"/>
+  <text x="146" y="110" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Risk Management</text>
+  <text x="146" y="134" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="13">Protect capital before chasing profits</text>
+  <rect x="520" y="230" width="130" height="68" rx="16" fill="#172554" stroke="#223A72"/>
+  <text x="548" y="262" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Control Losses</text>
+  <defs>
+    <linearGradient id="bg" x1="24" y1="24" x2="776" y2="396" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+</svg>

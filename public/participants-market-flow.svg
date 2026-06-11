@@ -1,0 +1,28 @@
+<svg width="800" height="420" viewBox="0 0 800 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="420" rx="24" fill="#07111F"/>
+  <rect x="24" y="24" width="752" height="372" rx="18" fill="url(#bg)" stroke="#243447"/>
+  <rect x="90" y="110" width="180" height="160" rx="18" fill="#0F172A" stroke="#22344B"/>
+  <text x="124" y="165" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Retail Traders</text>
+  <text x="124" y="194" fill="#A5F3FC" font-family="Arial, Helvetica, sans-serif" font-size="13">Emotional reactions</text>
+  <text x="124" y="217" fill="#A5F3FC" font-family="Arial, Helvetica, sans-serif" font-size="13">Smaller positions</text>
+
+  <rect x="310" y="110" width="180" height="160" rx="18" fill="#0F172A" stroke="#22344B"/>
+  <text x="344" y="165" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Institutions</text>
+  <text x="344" y="194" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="13">Big capital</text>
+  <text x="344" y="217" fill="#BFDBFE" font-family="Arial, Helvetica, sans-serif" font-size="13">Market impact</text>
+
+  <rect x="530" y="110" width="180" height="160" rx="18" fill="#0F172A" stroke="#22344B"/>
+  <text x="564" y="165" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">Price Moves</text>
+  <text x="564" y="194" fill="#FDE68A" font-family="Arial, Helvetica, sans-serif" font-size="13">Liquidity + order flow</text>
+  <text x="564" y="217" fill="#FDE68A" font-family="Arial, Helvetica, sans-serif" font-size="13">Structure forms</text>
+
+  <path d="M270 190H310" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M490 190H530" stroke="#38BDF8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M160 300C250 255 345 255 440 295C495 315 560 310 640 265" stroke="#22C55E" stroke-width="4" stroke-dasharray="10 10"/> 
+  <defs>
+    <linearGradient id="bg" x1="24" y1="24" x2="776" y2="396" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+  </defs>
+</svg>
