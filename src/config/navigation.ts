@@ -189,6 +189,10 @@ export const navigation = [
         title: "Algorithmic Trading",
         slug: "algorithmic-trading",
       },
+      {
+        title: "Portfolio Management",
+        slug: "portfolio-management",
+      },
     ],
   },
 ];
