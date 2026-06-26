@@ -8,7 +8,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import Sidebar from "./sidebar";
+import Sidebar from "./sidebarleft";
 
 export default function MobileSidebar() {
   return (

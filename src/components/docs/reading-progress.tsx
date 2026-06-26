@@ -38,7 +38,7 @@ export default function ReadingProgress() {
 
   return (
     <div
-      className="fixed top-0 left-0 h-1 bg-blue-600 z-50"
+      className="fixed top-0 left-0 h-1 bg-green-500 z-50"
       style={{
         width: `${progress}%`,
       }}
