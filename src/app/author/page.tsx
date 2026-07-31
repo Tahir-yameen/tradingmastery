@@ -7,11 +7,11 @@ import { FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 
 export default function AuthorPage() {
   return (
-    <div className="bg-[#050816] text-white min-h-screen">
+    <div className="min-h-screen bg-[#050816] px-4 py-6 text-white sm:px-6">
 
       {/* ================= HERO ================= */}
-      <section className="relative py-16 px-6 text-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-green-500/10 to-transparent" />
+      <section className="relative px-0 py-16 text-center sm:px-6">
+        <div className="absolute inset-0 bg-linear-to-b from-green-500/10 to-transparent" />
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -19,11 +19,11 @@ export default function AuthorPage() {
           transition={{ duration: 0.6 }}
           className="relative z-10 max-w-3xl mx-auto"
         >
-          <h1 className="text-4xl lg:text-6xl font-black">
+          <h1 className="text-3xl font-black sm:text-4xl lg:text-6xl">
             Meet <span className="text-green-400">Trading Professional</span>
           </h1>
 
-          <p className="text-gray-400 mt-3 text-lg">
+          <p className="mt-3 text-base text-gray-400 sm:text-lg">
             Learn real-world trading strategies, risk management, and mindset
             from an experienced trader.
           </p>
@@ -31,8 +31,8 @@ export default function AuthorPage() {
       </section>
 
       {/* ================= AUTHOR PROFILE ================= */}
-      <section className="px-6 py-2">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <section className="py-2 sm:px-6">
+        <div className="mx-auto grid max-w-6xl items-center gap-6 lg:grid-cols-2">
 
           {/* LEFT - IMAGE */}
           <motion.div
@@ -42,10 +42,10 @@ export default function AuthorPage() {
             className="flex justify-center"
           >
             <Image
-              src="/author.png"
+              src="/author.jpg"
               alt="Author"
-              width={150}
-              height={150}
+              width={300}
+              height={300}
               className="rounded-2xl"
             />
           </motion.div>
@@ -53,7 +53,6 @@ export default function AuthorPage() {
           {/* RIGHT - CONTENT */}
           <div>
             <h6 className="text-lg font-bold">
-              TY
             </h6>
 
             <p className="text-green-400 font-semibold mt-2">
@@ -97,8 +96,8 @@ export default function AuthorPage() {
       </section>
 
       {/* ================= STATS ================= */}
-      <section className="px-6 py-16 mt-10 bg-black/40">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="mt-10 bg-black/40 px-0 py-16 sm:px-6">
+        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-6 text-center sm:gap-8 md:grid-cols-4">
 
           {[
             { value: "10+", label: "Years Experience" },
@@ -117,8 +116,8 @@ export default function AuthorPage() {
       </section>
 
       {/* ================= SKILLS ================= */}
-      <section className="px-6 py-16">
-        <div className="max-w-5xl mx-auto">
+      <section className="px-0 py-16 sm:px-6">
+        <div className="mx-auto max-w-5xl">
 
           <h2 className="text-3xl font-bold text-center mb-10">
             Expertise
@@ -145,8 +144,8 @@ export default function AuthorPage() {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="px-6 py-20 text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold">
+      <section className="px-0 py-20 text-center sm:px-6">
+        <h2 className="text-2xl font-bold sm:text-3xl lg:text-4xl">
           Start Your Trading Journey Today 🚀
         </h2>
 

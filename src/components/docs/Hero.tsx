@@ -254,12 +254,12 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-[#050816] overflow-hidden">
+    <section className="relative flex min-h-[calc(100vh-4rem)] items-center overflow-hidden bg-[#050816] py-12 sm:py-16 lg:min-h-screen lg:py-20">
       
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-green-500/10 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-linear-to-b from-green-500/10 to-transparent pointer-events-none" />
 
-      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="container relative z-10 mx-auto grid items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12">
         
         {/* LEFT CONTENT */}
         <div>
@@ -274,13 +274,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-white mt-8 font-black leading-tight"
+            className="mt-6 font-black leading-tight text-white sm:mt-8"
           >
-            <span className="block text-5xl lg:text-7xl">
+            <span className="block text-4xl sm:text-5xl lg:text-7xl">
               {content.hero.title1}
             </span>
 
-            <span className="block text-green-400 text-6xl lg:text-8xl">
+            <span className="block text-5xl text-green-400 sm:text-6xl lg:text-8xl">
               {content.hero.title2}
             </span>
 
@@ -290,18 +290,17 @@ export default function Hero() {
           </motion.h1>
 
           {/* Description */}
-          <p className="text-gray-400 mt-8 text-lg max-w-xl">
+          <p className="mt-8 max-w-xl text-base text-gray-400 sm:text-lg">
             {content.hero.description}
           </p>
 
           {/* CTA Section */}
-          <div className="mt-10 flex items-center gap-6 flex-wrap">
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
             
             {/* Primary CTA */}
             <Link
               href="/docs/welcome"
-              className="bg-green-500 px-6 py-3 rounded-lg font-bold text-black inline-block
-                         hover:bg-green-400 transition-all duration-300 shadow-lg hover:scale-105"
+              className="inline-flex items-center justify-center rounded-lg bg-green-500 px-6 py-3 font-bold text-black shadow-lg transition-all duration-300 hover:scale-[1.02] hover:bg-green-400"
             >
               {content.hero.primaryCTA}
             </Link>
@@ -312,7 +311,7 @@ export default function Hero() {
             {/* Reviews */}
             <a
               href="#live-reviews"
-              className="text-sm font-bold text-green-400 hover:text-green-300 transition-colors flex items-center gap-1.5"
+              className="flex items-center justify-center gap-1.5 text-sm font-bold text-green-400 transition-colors hover:text-green-300 sm:justify-start"
             >
               Live Reviews
 
@@ -337,7 +336,7 @@ export default function Hero() {
           </div>
 
           {/* Live Users */}
-          <div className="flex items-center gap-2.5 mt-6">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:justify-start">
             
             {/* Animated Ping */}
             <span className="relative flex h-2.5 w-2.5">
@@ -355,13 +354,13 @@ export default function Hero() {
           </div>
 
             {/* Author */}
-            <div className="flex items-center gap-2.5 mt-3">
+            <div className="mt-3 flex items-center justify-center gap-2.5 sm:justify-start">
               <span className="text-[10px] font-bold tracking-widest text-gray-400 uppercase">
                 Authored by
               </span>
             </div>
 
-        <div className="flex items-center gap-3 py-2">
+        <div className="flex items-center justify-center gap-3 py-2 sm:justify-start">
           <a
             href="https://www.linkedin.com/in/tahir-yameen-22ba7a2b4/"
             target="_blank"
@@ -384,7 +383,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="flex justify-center transition-transform duration-300 hover:scale-110"
+          className="flex justify-center transition-transform duration-300 hover:scale-105"
         >
           <Image
             src="/og-image.png"
@@ -392,7 +391,7 @@ export default function Hero() {
             width={320}
             height={320}
             priority
-            className="rounded-lg shadow-[0_30px_80px_rgba(0,255,136,0.3)]"
+            className="w-full max-w-70 rounded-lg shadow-[0_30px_80px_rgba(0,255,136,0.3)] sm:max-w-80 lg:max-w-105"
           />
         </motion.div>
       </div>

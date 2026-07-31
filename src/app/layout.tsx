@@ -1,66 +1,9 @@
-// import type { Metadata } from "next";
-// import "./globals.css";
-// import { ThemeProvider } from "@/providers/theme-provider";
-// import Footer from "@/components/docs/Footer";
-
-// export const metadata: Metadata = {
-//   title: "Trading Mastery",
-//   description: "Learn trading from beginner to professional level.",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en" suppressHydrationWarning>
-//       <body>
-//         <ThemeProvider>
-//           {children}
-//         </ThemeProvider>
-//       </body>
-      
-//       {/* ✅ FOOTER OUTSIDE FLEX */}
-//       <Footer />
-//     </html>
-//   );
-// }
-
-// import type { Metadata } from "next";
-// import "./globals.css";
-// import { ThemeProvider } from "@/providers/theme-provider";
-// import Footer from "@/components/docs/Footer";
-
-// export const metadata: Metadata = {
-//   title: "Trading Mastery",
-//   description: "Learn trading from beginner to professional level.",
-// };
-
-// export default function RootLayout({
-//   children,
-// }: {
-//   children: React.ReactNode;
-// }) {
-//   return (
-//     <html lang="en" suppressHydrationWarning>
-//       <body>
-//         <ThemeProvider>
-//           {children}
-
-//           {/* ✅ FOOTER INSIDE BODY */}
-//           <Footer />
-//         </ThemeProvider>
-//       </body>
-//     </html>
-//   );
-// }
-
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Footer from "@/components/docs/Footer";
 import Navbar from "@/components/docs/navbar";
+import { DocsSidebarProvider } from "@/context/docs-sidebar-context";
 
 
 export const metadata: Metadata = {
@@ -108,13 +51,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-
-      <Navbar />        
         <ThemeProvider>
-          {children}
-
-          {/* ✅ Footer */}
-          <Footer />
+          <DocsSidebarProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </DocsSidebarProvider>
         </ThemeProvider>
       </body>
     </html>

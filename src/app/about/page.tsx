@@ -9,19 +9,19 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-300 px-6 py-16">
+    <div className="min-h-screen bg-linear-to-b from-black to-gray-900 px-4 py-16 text-gray-300 sm:px-6 lg:px-8">
 
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
 
         {/* HERO */}
         <div className="grid md:grid-cols-2 gap-10 items-center mb-20">
           
           {/* Text */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="mb-6 text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               About Trading Mastery
             </h1>
-            <p className="text-gray-400 text-lg leading-relaxed">
+            <p className="text-base leading-relaxed text-gray-400 sm:text-lg">
               Trading Mastery is a modern platform designed to help traders 
               go from beginner to professional level with structured learning, 
               powerful tools, and real-world strategies.
@@ -51,7 +51,7 @@ export default function AboutPage() {
         </div>
 
         {/* STATS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20 text-center">
+        <div className="mb-20 grid grid-cols-2 gap-4 text-center sm:gap-6 md:grid-cols-4">
           {[
             { value: "24K+", label: "Active Users" },
             { value: "150+", label: "Strategies" },
@@ -62,7 +62,7 @@ export default function AboutPage() {
               key={i}
               className="p-6 bg-white/5 border border-white/10 rounded-xl backdrop-blur"
             >
-              <h3 className="text-2xl font-bold text-green-500">
+              <h3 className="text-xl font-bold text-green-500 sm:text-2xl">
                 {item.value}
               </h3>
               <p className="text-gray-400 text-sm">{item.label}</p>
@@ -96,7 +96,7 @@ export default function AboutPage() {
 
         {/* FEATURES */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-10">
+          <h2 className="mb-10 text-center text-2xl font-bold text-white sm:text-3xl">
             Why Choose Us
           </h2>
 
@@ -142,7 +142,7 @@ export default function AboutPage() {
 
         {/* CTA */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+          <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl">
             Start Your Trading Journey Today 🚀
           </h2>
           <p className="text-gray-400 mb-6">

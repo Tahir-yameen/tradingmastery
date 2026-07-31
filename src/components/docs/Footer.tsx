@@ -6,15 +6,15 @@ import Hero from "@/components/docs/Hero";
 
 export default function Footer() {
   return (
-    <footer className="relative mt-20 border-t border-white/10 bg-gradient-to-b from-black to-gray-900">
+    <footer className="relative mt-20 border-t border-white/10 bg-linear-to-b from-black to-gray-900">
       
       {/* Glow Effect */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(34,197,94,0.15),transparent_70%)] pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         
         {/* TOP SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           
           {/* BRAND */}
           <div>
@@ -105,7 +105,7 @@ export default function Footer() {
         <div className="my-10 border-t border-white/10" />
 
         {/* BOTTOM SECTION */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           
           {/* COPYRIGHT */}
           <p className="text-gray-500 text-sm">

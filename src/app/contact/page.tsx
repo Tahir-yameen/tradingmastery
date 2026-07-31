@@ -17,28 +17,27 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black px-4 py-6 text-white sm:px-6">
 
       {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-0 py-16 md:grid-cols-2 sm:px-6">
         
         <div>
           <p className="text-green-500 font-semibold mb-2">CONTACT US</p>
           
-          <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
+          <h1 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             We're Here to Help <br />
             <span className="text-green-500">You Succeed</span>
           </h1>
 
-          <p className="text-gray-400 mt-4 max-w-md">
+          <p className="mt-4 max-w-md text-base text-gray-400 sm:text-lg">
             Have a question or need assistance? Our team is ready to help you on your trading journey.
           </p>
         </div>
 
         {/* Illustration */}
         <div className="flex justify-center">
-          <div className="relative flex items-center justify-center 
-                          w-[380px] h-[380px]">
+          <div className="relative flex h-[280px] w-[280px] items-center justify-center sm:h-[340px] sm:w-[340px] lg:h-[380px] lg:w-[380px]">
 
             {/* Glow Background */}
             <div className="absolute inset-0 bg-green-500/20 blur-3xl rounded-full"></div>
@@ -62,7 +61,7 @@ export default function ContactPage() {
       </section>
 
       {/* MAIN SECTION */}
-      <section className="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-6">
+      <section className="mx-auto grid max-w-7xl gap-6 px-0 py-2 sm:px-6 lg:grid-cols-3">
 
         {/* FORM */}
         <div className="lg:col-span-2 bg-white/5 border border-white/10 rounded-xl p-6">
@@ -126,7 +125,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="max-w-5xl mx-auto px-6 py-16">
+      <section className="mx-auto max-w-5xl px-0 py-16 sm:px-6">
         <h2 className="text-2xl font-bold text-center mb-8">
           Frequently Asked Questions
         </h2>
@@ -154,7 +153,7 @@ export default function ContactPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-6xl mx-auto px-6 pb-20">
+      <section className="mx-auto max-w-6xl px-0 pb-20 sm:px-6">
         <div className="bg-white/5 border border-white/10 rounded-xl p-6 flex flex-col md:flex-row justify-between items-center gap-4">
           
           <div>

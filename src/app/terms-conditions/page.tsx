@@ -2,13 +2,13 @@ import React from "react";
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-gray-300 px-6 py-16">
+    <div className="min-h-screen bg-linear-to-b from-black to-gray-900 px-4 py-16 text-gray-300 sm:px-6 lg:px-8">
       
       <div className="max-w-4xl mx-auto">
 
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             Terms & Conditions
           </h1>
           <p className="text-gray-400">

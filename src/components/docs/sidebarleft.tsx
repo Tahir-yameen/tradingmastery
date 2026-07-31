@@ -4,10 +4,16 @@ import Link from "next/link";
 import { navigation } from "@/config/navigation";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import { useDocsSidebar } from "@/context/docs-sidebar-context";
 
-export default function SidebarLeft() {
+type SidebarLeftProps = {
+  mobileOnly?: boolean;
+};
+
+export default function SidebarLeft({ mobileOnly = false }: SidebarLeftProps) {
   const pathname = usePathname();
   const [openSection, setOpenSection] = useState<string | null>(null);
+  const { selectedSection, setSelectedSection } = useDocsSidebar();
 
   // ✅ Auto-open active section
   useEffect(() => {
@@ -19,18 +25,21 @@ export default function SidebarLeft() {
 
     if (activeSection) {
       setOpenSection(activeSection.title);
+      setSelectedSection(activeSection.title);
     }
-  }, [pathname]);
+  }, [pathname, setSelectedSection]);
 
-  // ✅ Toggle section
   const toggleSection = (title: string) => {
     setOpenSection((prev) => (prev === title ? null : title));
+    setSelectedSection(title);
   };
 
   return (
-    <aside className="hidden lg:block w-64 border-r sticky top-16 h-[calc(100vh-64px)] overflow-y-auto">
-      <div className="p-6">
-        <h2 className="font-bold text-xl mb-6">
+    <aside
+      className={`${mobileOnly ? "block w-full" : "hidden lg:block"} ${mobileOnly ? "" : "w-64 border-r"} h-full overflow-y-auto`}
+    >
+      <div className="p-4 sm:p-6">
+        <h2 className="mb-6 text-lg font-bold sm:text-xl">
           CHAPTERS
         </h2>
           {navigation.map((section, sectionIndex) => {
@@ -41,6 +50,7 @@ export default function SidebarLeft() {
               (item) => `/docs/${item.slug}` === pathname
             );
 
+            const isSectionActive = selectedSection === section.title || isActive;
             const isOpen = openSection === section.title;
 
             return (
@@ -49,8 +59,8 @@ export default function SidebarLeft() {
                 {/* Main Heading */}
                 <button
                   onClick={() => toggleSection(section.title)}
-                  className={`w-full text-left text-lg font-semibold flex justify-between items-center ${
-                    isActive
+                  className={`w-full text-left text-base font-semibold flex justify-between items-center sm:text-lg ${
+                    isSectionActive
                       ? "text-green-500"
                       : "text-gray-400 hover:text-green-400"
                   }`}
@@ -60,8 +70,8 @@ export default function SidebarLeft() {
                 </button>
 
                 {/* Sub Items */}
-                <div className={`${isOpen ? "max-h-96 mt-2" : "max-h-0"} overflow-hidden`}>
-                  <ul className="pl-4 space-y-2 border-l border-gray-700">
+                <div className={`${isOpen ? "mt-2 max-h-96" : "max-h-0"} overflow-hidden`}>
+                  <ul className="space-y-2 border-l border-gray-700 pl-4">
                     
                     {section.items.map((item, itemIndex) => {
                       const safeSlug =
@@ -76,7 +86,8 @@ export default function SidebarLeft() {
                         <li key={itemKey}>
                           <Link
                             href={`/docs/${safeSlug}`}
-                            className={`block text-sm ${
+                            onClick={() => setSelectedSection(section.title)}
+                            className={`block text-sm leading-6 ${
                               isItemActive
                                 ? "text-green-400 font-medium"
                                 : "text-gray-400 hover:text-green-300"
